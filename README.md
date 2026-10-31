@@ -35,3 +35,7 @@ Teks dengan atribut `data-t` di HTML mengambil isi dari `app.js`; mengubah HTML 
 - Periksa tampilan ID dan EN, foto, serta fungsi terkait sebelum memasukkan perubahan ke `main`.
 
 Untuk perubahan beberapa file, disarankan memakai branch dan pull request agar dapat diperiksa bersama tim. Langkah lengkap: [Panduan Maintenance](docs/PANDUAN-MAINTENANCE.md).
+
+## SEO dan pencarian Google
+
+Website memiliki canonical, metadata perusahaan, data terstruktur Organization dan [sitemap.xml](sitemap.xml). Langkah pengiriman sitemap melalui Search Console serta cara memperbarui metadata ada pada bagian **SEO dan Google Search Console** dalam [Panduan Maintenance](docs/PANDUAN-MAINTENANCE.md).

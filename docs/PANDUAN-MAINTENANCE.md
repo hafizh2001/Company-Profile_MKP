@@ -258,3 +258,42 @@ Referensi: [membatalkan commit di GitHub Desktop](https://docs.github.com/en/des
 Gunakan pesan commit yang menyebut perubahan nyata, simpan sumber foto dan konfirmasi data proyek di tempat kerja tim, serta perbarui panduan bila struktur berubah. Repository dan aset website bersifat publik; jangan memasukkan password, token, atau dokumen internal yang belum dipilih untuk publikasi.
 
 Saat menyerahkan pekerjaan, catat commit terakhir, file yang diubah, pemeriksaan yang dilakukan, serta masalah yang masih ada. Dengan begitu tim berikutnya dapat melanjutkan tanpa menebak sumber konten atau pengaturan hosting.
+
+## 13. SEO dan Google Search Console
+
+Perbaikan SEO mencakup judul deskriptif, deskripsi ID/EN, canonical, Open Graph, data terstruktur Organization dan sitemap. Semua alamat utama menggunakan:
+
+```text
+https://hafizh2001.github.io/Company-Profile_MKP/
+```
+
+| Pengaturan | Lokasi edit |
+| --- | --- |
+| Judul hasil pencarian yang disarankan | Elemen `<title>` pada `index.html` |
+| Deskripsi awal halaman | `meta[name="description"]` pada `index.html` |
+| Deskripsi sesuai bahasa setelah JavaScript berjalan | Kunci `meta` pada kedua bahasa di `app.js` |
+| Pengantar identitas perusahaan | `introLead` ID/EN di `app.js` dan teks awal terkait di HTML |
+| Canonical dan pratinjau tautan | `link[rel="canonical"]` dan meta `og:*` di `index.html` |
+| Identitas untuk mesin pencari | JSON-LD `Organization` di `index.html` |
+| Daftar halaman untuk Google | `sitemap.xml` di root repository |
+| Verifikasi kepemilikan Google | Meta `google-site-verification` di `index.html`; pertahankan tag ini |
+
+Ketika mengubah nama, alamat, logo atau kontak, sesuaikan juga JSON-LD dan metadata terkait. Isi data terstruktur harus sesuai informasi perusahaan yang terlihat di halaman. Jangan menghubungkan profil atau domain perusahaan lain melalui `sameAs`. Nama alternatif bukan perubahan nama resmi.
+
+Sitemap saat ini berisi satu URL, karena website merupakan satu halaman. Tautan `#about`, `#projects`, `#contact`, galeri dialog dan tombol bahasa bukan halaman terpisah. Jangan membuat URL bahasa atau proyek dalam sitemap bila halaman tersebut belum benar-benar tersedia. `lastmod` tidak ditambahkan agar tidak mengirim tanggal perubahan yang dibuat-buat.
+
+**Mengirim sitemap:** masuk ke properti URL-prefix website di Google Search Console → **Peta Situs / Sitemaps** → masukkan `sitemap.xml` bila awalan website sudah ditampilkan, atau alamat lengkap berikut bila kolom meminta URL lengkap → **Kirim**:
+
+```text
+https://hafizh2001.github.io/Company-Profile_MKP/sitemap.xml
+```
+
+Setelah perubahan konten penting dipublikasikan, gunakan **Inspeksi URL** pada alamat halaman utama dan minta pengindeksan jika diperlukan. Tidak perlu mengirim permintaan berulang untuk halaman yang sama. Pantau status indeks serta laporan Performa untuk melihat tayangan, klik dan kueri pencarian nama perusahaan.
+
+`robots.txt` berlaku dari root hostname, yaitu `https://hafizh2001.github.io/robots.txt`. Menaruhnya di subfolder `/Company-Profile_MKP/` tidak membuat aturan yang berlaku untuk crawler. Karena repository ini mengelola subfolder tersebut, sitemap dikirim langsung melalui Search Console.
+
+Jika kelak menggunakan domain sendiri, perbarui canonical, URL Open Graph, URL dan ID Organization, alamat logo/gambar absolut, sitemap, serta properti Search Console untuk domain baru. Koordinasikan perubahan domain dengan penanggung jawab hosting.
+
+SEO membantu Google memahami website; tidak menjamin peringkat atau tanggal kemunculan. Hasil pencarian `site:` juga tidak selalu menampilkan seluruh URL yang diindeks. Gunakan Inspeksi URL sebagai pemeriksaan status halaman.
+
+Referensi resmi: [judul halaman](https://developers.google.com/search/docs/appearance/title-link), [Organization](https://developers.google.com/search/docs/appearance/structured-data/organization), [sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap), [canonical](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls), dan [batas pencarian site:](https://developers.google.com/search/docs/monitor-debug/search-operators/all-search-site).
