@@ -1,0 +1,15 @@
+.directors{display:grid;grid-template-columns:1fr 2fr;gap:clamp(40px,6vw,90px);padding:78px var(--pad) 76px;background:#f7f3f0;border-top:1px solid #ecdeda;border-bottom:1px solid #ecdeda}
+.directors-intro{padding-top:12px}
+.directors-intro .eyebrow{color:var(--red);font-size:10px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:24px}
+.directors-intro h2{font-size:clamp(30px,3vw,44px);line-height:1.16;max-width:330px;font-weight:600;letter-spacing:-.04em}
+.directors-rule{display:block;margin-top:27px;width:58px;height:3px;background:var(--red)}
+.directors-message{position:relative;padding-top:37px}
+.directors-quote{position:absolute;left:-5px;top:-30px;font-family:Georgia,serif;color:var(--red);font-size:102px;line-height:1;user-select:none}
+.directors-message blockquote{margin:0;font-size:16px;line-height:1.9;color:#394247;letter-spacing:.005em;max-width:850px}
+.directors-signatures{display:grid;grid-template-columns:1fr 1fr;gap:32px;border-top:1px solid #d9ccc7;padding-top:27px;margin-top:33px}
+.directors-signatures .director-name{font-size:14px;color:var(--ink);font-weight:600;line-height:1.65}
+.directors-signatures .director-role{font-size:11px;margin-top:5px;color:#737b7d}
+.directors+.partners{padding-top:45px}
+.directors+.partners .partners-heading{border-top:none;padding-top:0}
+@media(max-width:900px){.directors{grid-template-columns:1fr;gap:40px;padding-block:58px}.directors-intro h2{max-width:480px}.directors-intro{padding-top:0}.directors-intro .eyebrow{margin-bottom:18px}.directors-rule{margin-top:22px}.directors-message blockquote{font-size:15px}.directors-message{padding-top:32px}.directors-quote{top:-28px;font-size:92px}}
+@media(max-width:600px){.directors{padding-block:45px;gap:38px}.directors-intro h2{font-size:33px;max-width:320px}.directors-message blockquote{font-size:14px;line-height:1.85;letter-spacing:0}.directors-signatures{grid-template-columns:1fr;gap:21px;padding-top:24px;margin-top:26px}.directors-signatures .director-name{font-size:14px}.directors-signatures .director-role{font-size:11px}.directors+.partners{padding-top:35px}}
