@@ -7,7 +7,7 @@
 .directors-quote{position:absolute;left:-5px;top:-30px;font-family:Georgia,serif;color:var(--red);font-size:102px;line-height:1;user-select:none}
 .directors-message blockquote{margin:0;font-size:16px;line-height:1.9;color:#394247;letter-spacing:.005em;max-width:850px}
 .directors-signatures{display:grid;grid-template-columns:1fr 1fr;gap:32px;border-top:1px solid #d9ccc7;padding-top:27px;margin-top:33px}
-.directors-signatures .director-name{font-size:14px;color:var(--ink);font-weight:600;line-height:1.65}
+.directors-signatures .director-name{font-size:14px;color:var(--ink);font-weight:400;line-height:1.65}
 .directors-signatures .director-role{font-size:11px;margin-top:5px;color:#737b7d}
 .directors+.partners{padding-top:45px}
 .directors+.partners .partners-heading{border-top:none;padding-top:0}
